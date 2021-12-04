@@ -23,7 +23,7 @@ def ask(question, chat_log=None):
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0.3,
-        stop=["\n\n"],
+        stop=["\n"],
     )
     story = response['choices'][0]['text']
     return str(story)
