@@ -12,7 +12,7 @@ app.config['SECRET_KEY'] = 'naKlRJsgw8'
 def comparabot():
     incoming_msg = request.values['Body']
     chat_log = session.get('chat_log')
-    answer = ask(incoming_msg, chat_log)
+    answer = ask(incoming_msg, ' ')
     session['chat_log'] = append_interaction_to_chat_log(incoming_msg, answer, ' ')
     msg = MessagingResponse()
     msg.message(answer)
